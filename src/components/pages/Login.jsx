@@ -6,7 +6,7 @@ const Login = () => {
   const [email, setEmail] = useState('')
   const [password, setPassword] = useState('')
   const [error, setError] = useState('')
-  const [user, signUp] = UserAuth()
+  const [ signUp] = UserAuth()
     const navigate = useNavigate()
 
 const handleSubmit = async (e) => {
@@ -36,9 +36,16 @@ const handleSubmit = async (e) => {
         placeholder='email' autoComplete='email' />
         <input onChange={(e) => setPassword(e.target.value)} className='bg-gray rounded' type='password' placeholder='Password' autoComplete='current-password' />
         <button className='bg-red py-3 rounded font-bold my-6'>Sign In</button>
-        <div className='flex justify-between text-sm text-gray items-center'>
-          <p></p>
+        <div className='flex justify-between text-sm text-gray-600 items-center'>
+          <p>
+<input className='mr-2' type='checkbox'/>
+Remember me</p>
+          <p>Need help?</p>
         </div>
+        <p className='py-8'>
+        <span className='text-gray-600'>New to Netflix?</span>
+        <Link to='/signup'>Sign Up</Link>
+        </p>
       </form>
     </div>
   </div>
