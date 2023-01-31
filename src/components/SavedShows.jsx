@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { MdChevronLeft, MdChevronRight, MdOutlineViewSidebar } from 'react-icons/md'
-import {AiOutlineClose} from 'react-icons/ai'
+import { AiOutlineClose } from 'react-icons/ai';
 import { UserAuth } from '../context/AuthContext'
 import { db } from '../firebase'
 import { updateDoc, doc, onSnapshot} from 'firebase/firestore'
@@ -52,7 +52,7 @@ const [movies, setMovies] = useState([])
             <p className='white-space-normal text-xs font-bold items-center h-full text-center justify-center flex md:text-sm'>
                 {item?.title}
             </p>
-            <p onClick={() => deleteShow(item.id)} className='absolute top-4 right-4 text-gray'>AiOutlineClose</p>
+            <p onClick={() => deleteShow(item.id)} className='absolute top-4 right-4 text-gray'><AiOutlineClose /></p>
             </div></div>
         )
         )}
